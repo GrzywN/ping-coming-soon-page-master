@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Karol Binkowski" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Ping coming soon page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./images/logo.svg" alt="PING" class="header__logo" />
+    </header>
+    <main>
+      <div class="component">
+        <h1 class="component__header">We are launching soon!</h1>
+        <p class="component__paragraph">Subscribe and get notified</p>
+        <form action="" method="post">
+          <input
+            class="component__text-field"
+            data-valid="true"
+            type="text"
+            name="email"
+            id="email"
+          />
+          <label class="component__error" data-valid="true" for="email"
+            >Please provide a valid email address</label
+          >
+          <button class="component__button">Notify Me</button>
+        </form>
+        <img src="./images/illustration-dashboard.png" alt="Dashboard" />
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__paragraph">
+        &copy; Copyright Ping. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
