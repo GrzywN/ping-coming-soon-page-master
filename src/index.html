@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Karol Binkowski" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Ping coming soon page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <script src="./js/validation.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./images/logo.svg" alt="PING" class="header__logo" />
+    </header>
+    <main>
+      <div class="component">
+        <h1 class="component__header">
+          We are launching
+          <strong class="component__header--accent">soon!</strong>
+        </h1>
+        <p class="component__paragraph">Subscribe and get notified</p>
+        <form
+          action="/"
+          method="POST"
+          enctype="text/plain"
+          required
+          id="component__form"
+          class="component__form"
+        >
+          <input
+            class="component__input"
+            data-valid="true"
+            type="text"
+            placeholder="Your email address..."
+            name="email"
+            id="email"
+          />
+          <label class="component__error" data-valid="true" for="email"
+            >Please provide a valid email address</label
+          >
+          <input type="submit" class="component__submit" value="Notify Me" />
+        </form>
+        <img
+          src="./images/illustration-dashboard.png"
+          alt="Dashboard"
+          class="component__illustration"
+        />
+      </div>
+    </main>
+    <footer class="footer">
+      <ul class="footer__socials">
+        <li class="footer__socials-item">
+          <a href="#" class="footer__socials-a">
+            <img
+              src="./images/icon-facebook.svg"
+              alt="Facebook"
+              class="footer__socials-icon"
+              title="Facebook"
+            />
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a href="#" class="footer__socials-a">
+            <img
+              src="./images/icon-twitter.svg"
+              alt="Twitter"
+              class="footer__socials-icon"
+              title="Twitter"
+            />
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a href="#" class="footer__socials-a">
+            <img
+              src="./images/icon-instagram.svg"
+              alt="Instagram"
+              class="footer__socials-icon"
+              title="Instagram"
+            />
+          </a>
+        </li>
+      </ul>
+      <p class="footer__paragraph">
+        &copy; Copyright Ping. All rights reserved.
+      </p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="./js/animations.js"></script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+.header {
+  @include flex-center;
+}
+
+.component {
+  @include flex-column;
+  gap: 1.5em;
+  max-width: 90vw;
+  &__form {
+    margin-inline: 1rem;
+    display: grid;
+  }
+  &__input {
+    padding-inline: 2rem;
+    min-height: 38px;
+    border: 1px solid $pale-blue;
+    border-radius: $border-radius;
+    &:focus {
+      border: 1px solid $blue;
+      outline: none;
+    }
+    &[data-valid="false"] {
+      animation: errorOpacity 300ms ease-in;
+      border: 1px solid $light-red;
+    }
+  }
+  &__error {
+    display: none;
+    &[data-valid="false"] {
+      animation: errorOpacity 300ms ease-in;
+      display: block;
+    }
+  }
+  &__submit {
+    cursor: pointer;
+    margin-top: 2rem;
+    min-height: 38px;
+    background-color: $blue;
+    border: 0;
+    border-radius: $border-radius;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    &:hover {
+      background-color: lighten($blue, 5%);
+      transform: scale(1.05);
+      transition: transform 150ms ease;
+    }
+    &:active {
+      transform: scale(1);
+    }
+  }
+  &__illustration {
+    margin-top: 2.5em;
+    max-width: 100%;
+  }
+}
+
+.footer {
+  @include flex-column;
+  justify-items: center;
+  padding-bottom: 1.75rem;
+  &__socials {
+    @include flex-center;
+    list-style: none;
+    gap: 0.5em;
+    padding-bottom: 1.5rem;
+  }
+  &__socials-a {
+    @include grid-center;
+    border: 1px solid $pale-blue;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 100%;
+    &:hover {
+      border: $blue;
+      background-color: $blue;
+      transform: scale(1.25);
+      transition: transform 200ms ease;
+    }
+  }
+  &__socials-icon {
+    padding: 0.375rem;
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+    filter: brightness(0) saturate(100%) invert(39%) sepia(98%) saturate(2110%)
+      hue-rotate(210deg) brightness(101%) contrast(91%);
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+@media screen and (min-width: 35em) {
+  body {
+    padding-top: 5em;
+  }
+  .component {
+    margin-top: 2.5em;
+    max-width: 45vw;
+    &__form {
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__input {
+      order: 1;
+      flex-basis: 66%;
+      min-height: none;
+      padding-block: 1rem;
+    }
+    &__error {
+      order: 3;
+      padding-inline: 2rem;
+      margin-top: 0.5rem;
+    }
+    &__submit {
+      margin: 0;
+      order: 2;
+      flex-basis: 32%;
+    }
+    &__illustration {
+      margin-top: 4em;
+      max-width: 640px;
+    }
+  }
+
+  .footer {
+    margin-top: 4.5em;
+  }
+}

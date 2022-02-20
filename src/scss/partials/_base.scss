@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include flex-column;
+  min-height: 100vh;
+  justify-content: space-around;
+  padding-inline: 1.75rem;
+}
+
+main {
+  @include grid-center;
+}
+
+@keyframes errorOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

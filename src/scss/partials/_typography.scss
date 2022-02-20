@@ -1,0 +1,114 @@
+$font-libre-franklin: "Libre Franklin", sans-serif;
+
+@media screen and (max-width: 35em) {
+  .component {
+    text-align: center;
+    &__header {
+      font-family: $font-libre-franklin;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 32px;
+      color: $gray;
+      &--accent {
+        font-weight: 700;
+        color: $very-dark-blue;
+      }
+    }
+    &__paragraph {
+      font-family: $font-libre-franklin;
+      font-size: 12px;
+      font-weight: 300;
+      color: $very-dark-blue;
+    }
+    &__input {
+      font-family: $font-libre-franklin;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 20px;
+      color: black;
+    }
+    &__error {
+      font-family: $font-libre-franklin;
+      font-size: 10px;
+      font-style: italic;
+      line-height: 20px;
+      letter-spacing: 0.13px;
+      color: $light-red;
+    }
+    &__submit {
+      font-family: $font-libre-franklin;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      color: #fff;
+    }
+  }
+
+  ::placeholder {
+    color: $pale-blue;
+  }
+
+  .footer {
+    text-align: center;
+    &__paragraph {
+      font-family: $font-libre-franklin;
+      font-size: 10px;
+      font-weight: 300;
+      color: $gray;
+    }
+  }
+}
+
+@media screen and (min-width: 35em) {
+  .component {
+    text-align: center;
+    &__header {
+      font-family: $font-libre-franklin;
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 60px;
+      color: $gray;
+      &--accent {
+        font-weight: 700;
+        color: $very-dark-blue;
+      }
+    }
+    &__paragraph {
+      font-family: $font-libre-franklin;
+      font-size: 20px;
+      font-weight: 300;
+      color: $very-dark-blue;
+    }
+    &__input {
+      font-family: $font-libre-franklin;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 20px;
+      color: black;
+    }
+    &__error {
+      text-align: left;
+      font-family: $font-libre-franklin;
+      font-size: 12px;
+      font-style: italic;
+      line-height: 20px;
+      letter-spacing: 0.15px;
+      color: $light-red;
+    }
+    &__submit {
+      font-family: $font-libre-franklin;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+  .footer {
+    text-align: center;
+    &__paragraph {
+      font-family: $font-libre-franklin;
+      font-size: 12px;
+      font-weight: 300;
+      color: $gray;
+    }
+  }
+}
